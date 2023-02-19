@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+@addTagHelper *, Slot11_DemoCreateTagHelper
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@{
+    var productlist = new List<String>
+    {
+        "Laptop",
+        "Phone",
+        "Car"
+    };
+}
+<mylist
+    list-title="Danh sách sản phẩm"
+    list-items="@productlist">
+</mylist>
